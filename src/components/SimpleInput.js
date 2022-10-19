@@ -10,6 +10,10 @@ const SimpleInput = (props) => {
   const formSubmissionHandler = event => {
     event.preventDefault();
 
+    if (enteredName.trim() === '') {
+      return;
+    }
+
     console.log(enteredName);
     // we could use useRef hook in case we might want to handle focus
     // or because we are going to validate only after submit
